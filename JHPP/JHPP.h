@@ -40,6 +40,7 @@
  @param responder a view or viewController.
  */
 + (void)pushVC:(UIViewController *)vc from:(id)responder;
++ (void)pushVC:(UIViewController *)vc from:(id)responder animated:(BOOL)animated;
 
 /**
  Push a viewController.
@@ -49,6 +50,7 @@
  @param responder a view or viewController.
  */
 + (void)pushVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder;
++ (void)pushVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder animated:(BOOL)animated;
 
 /**
  Present a viewController.
@@ -57,6 +59,7 @@
  @param responder a view or viewController.
  */
 + (void)presentVC:(UIViewController *)vc from:(id)responder;
++ (void)presentVC:(UIViewController *)vc from:(id)responder animated:(BOOL)animated;
 
 /**
  Push a viewController.
@@ -66,5 +69,6 @@
  @param responder a view or viewController.
  */
 + (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder;
++ (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder animated:(BOOL)animated;
 
 @end

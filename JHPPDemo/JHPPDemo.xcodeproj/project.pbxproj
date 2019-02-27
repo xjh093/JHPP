@@ -140,8 +140,8 @@
 			children = (
 				18C84E5122262966007D7232 /* JHPP.h */,
 				18C84E5422262966007D7232 /* JHPP.m */,
-				18C84E5222262966007D7232 /* JHUIViewControllerDecoupler.m */,
 				18C84E5322262966007D7232 /* JHUIViewControllerDecoupler.h */,
+				18C84E5222262966007D7232 /* JHUIViewControllerDecoupler.m */,
 			);
 			name = JHPP;
 			path = ../../JHPP;

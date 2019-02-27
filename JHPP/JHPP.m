@@ -36,28 +36,48 @@
 
 + (void)pushVC:(UIViewController *)vc from:(id)responder
 {
+    [self pushVC:vc from:responder animated:YES];
+}
+
++ (void)pushVC:(UIViewController *)vc from:(id)responder animated:(BOOL)animated
+{
     UIViewController *topVC = [self fetchViewController:responder];
-    [topVC.navigationController pushViewController:vc animated:YES];
+    [topVC.navigationController pushViewController:vc animated:animated];
 }
 
 + (void)pushVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder
 {
+    [self pushVC:vcString paramter:dic from:responder animated:YES];
+}
+
++ (void)pushVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder animated:(BOOL)animated
+{
     UIViewController *topVC = [self fetchViewController:responder];
     UIViewController *vc = [JHUIViewControllerDecoupler jh_controllerFromString:vcString paramter:dic];
-    [topVC.navigationController pushViewController:vc animated:YES];
+    [topVC.navigationController pushViewController:vc animated:animated];
 }
 
 + (void)presentVC:(UIViewController *)vc from:(id)responder
 {
+    [self presentVC:vc from:responder animated:YES];
+}
+
++ (void)presentVC:(UIViewController *)vc from:(id)responder animated:(BOOL)animated
+{
     UIViewController *topVC = [self fetchViewController:responder];
-    [topVC presentViewController:vc animated:YES completion:nil];
+    [topVC presentViewController:vc animated:animated completion:nil];
 }
 
 + (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder
 {
+    [self presentVC:vcString paramter:dic from:responder animated:YES];
+}
+
++ (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder animated:(BOOL)animated
+{
     UIViewController *topVC = [self fetchViewController:responder];
     UIViewController *vc = [JHUIViewControllerDecoupler jh_controllerFromString:vcString paramter:dic];
-    [topVC presentViewController:vc animated:YES completion:nil];
+    [topVC presentViewController:vc animated:animated completion:nil];
 }
 
 #pragma mark --- private
