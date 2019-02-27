@@ -1,5 +1,6 @@
 # JHPP
 Push &amp; Present ViewController at any view, just so easy!
+- 在任何 `view` 内进行 `Push`、`Present`，就是这么简单!
 
 ---
 
