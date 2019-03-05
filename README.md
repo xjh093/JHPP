@@ -4,6 +4,18 @@ Push &amp; Present ViewController at any view, just so easy!
 
 ---
 
+# Version
+Latest release version:
+
+[1.1.0](https://github.com/xjh093/JHPP/releases)
+
+---
+
+# Cocoapods
+`pod "JHPP"`
+
+---
+
 # What
 
 ![image](https://github.com/xjh093/JHPP/blob/master/gif.gif)
