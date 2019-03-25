@@ -60,9 +60,11 @@
  */
 + (void)presentVC:(UIViewController *)vc from:(id)responder;
 + (void)presentVC:(UIViewController *)vc from:(id)responder animated:(BOOL)animated;
++ (void)presentVC:(UIViewController *)vc from:(id)responder navigation:(BOOL)navigation;
++ (void)presentVC:(UIViewController *)vc from:(id)responder navigation:(BOOL)navigation animated:(BOOL)animated;
 
 /**
- Push a viewController.
+ Present a viewController.
  
  @param vcString name of viewController.
  @param dic viewController's property.
@@ -70,5 +72,7 @@
  */
 + (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder;
 + (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder animated:(BOOL)animated;
++ (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder navigation:(BOOL)navigation;
++ (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder navigation:(BOOL)navigation animated:(BOOL)animated;
 
 @end

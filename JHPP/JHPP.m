@@ -68,6 +68,20 @@
     [topVC presentViewController:vc animated:animated completion:nil];
 }
 
++ (void)presentVC:(UIViewController *)vc from:(id)responder navigation:(BOOL)navigation
+{
+    [self presentVC:vc from:responder navigation:navigation animated:YES];
+}
+
++ (void)presentVC:(UIViewController *)vc from:(id)responder navigation:(BOOL)navigation animated:(BOOL)animated
+{
+    UIViewController *topVC = [self fetchViewController:responder];
+    if (navigation) {
+        vc = [[[topVC.navigationController class] alloc] initWithRootViewController:vc];
+    }
+    [topVC presentViewController:vc animated:animated completion:nil];
+}
+
 + (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder
 {
     [self presentVC:vcString paramter:dic from:responder animated:YES];
@@ -77,6 +91,21 @@
 {
     UIViewController *topVC = [self fetchViewController:responder];
     UIViewController *vc = [JHUIViewControllerDecoupler jh_controllerFromString:vcString paramter:dic];
+    [topVC presentViewController:vc animated:animated completion:nil];
+}
+
++ (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder navigation:(BOOL)navigation
+{
+    [self presentVC:vcString paramter:dic from:responder navigation:navigation animated:YES];
+}
+
++ (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder navigation:(BOOL)navigation animated:(BOOL)animated
+{
+    UIViewController *topVC = [self fetchViewController:responder];
+    UIViewController *vc = [JHUIViewControllerDecoupler jh_controllerFromString:vcString paramter:dic];
+    if (navigation) {
+        vc = [[[topVC.navigationController class] alloc] initWithRootViewController:vc];
+    }
     [topVC presentViewController:vc animated:animated completion:nil];
 }
 
