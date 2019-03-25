@@ -51,6 +51,12 @@ NSMutableDictionary *mdic = @{}.mutableCopy;
 
 # Logs
 
+### 2019-03-25:
+1.add some methods.
+
+### 2019-03-05:
+1.add some methods.
+
 ### 2019-02-27:
 1.upload.
 
