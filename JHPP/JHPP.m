@@ -54,7 +54,9 @@
 {
     UIViewController *topVC = [self fetchViewController:responder];
     UIViewController *vc = [JHUIViewControllerDecoupler jh_controllerFromString:vcString paramter:dic];
-    [topVC.navigationController pushViewController:vc animated:animated];
+    if (vc) {
+        [topVC.navigationController pushViewController:vc animated:animated];
+    }
 }
 
 + (void)presentVC:(UIViewController *)vc from:(id)responder
@@ -91,7 +93,9 @@
 {
     UIViewController *topVC = [self fetchViewController:responder];
     UIViewController *vc = [JHUIViewControllerDecoupler jh_controllerFromString:vcString paramter:dic];
-    [topVC presentViewController:vc animated:animated completion:nil];
+    if (vc) {
+        [topVC presentViewController:vc animated:animated completion:nil];
+    }
 }
 
 + (void)presentVC:(NSString *)vcString paramter:(NSDictionary *)dic from:(id)responder navigation:(BOOL)navigation
@@ -103,10 +107,12 @@
 {
     UIViewController *topVC = [self fetchViewController:responder];
     UIViewController *vc = [JHUIViewControllerDecoupler jh_controllerFromString:vcString paramter:dic];
-    if (navigation) {
-        vc = [[[topVC.navigationController class] alloc] initWithRootViewController:vc];
+    if (vc) {
+        if (navigation) {
+            vc = [[[topVC.navigationController class] alloc] initWithRootViewController:vc];
+        }
+        [topVC presentViewController:vc animated:animated completion:nil];
     }
-    [topVC presentViewController:vc animated:animated completion:nil];
 }
 
 #pragma mark --- private

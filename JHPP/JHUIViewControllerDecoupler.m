@@ -52,10 +52,9 @@
 
 + (UIViewController *)jh_notice_vc:(NSString *)string
 {
+#if DEBUG
     UIViewController *vc = [[UIViewController alloc] init];
     vc.view.backgroundColor = [UIColor whiteColor];
-    
-#if DEBUG
     vc.title = @"oops~😅";
     
     [vc.view addSubview:({
@@ -77,8 +76,10 @@
         label.numberOfLines = 0;
         label;
     })];
-#endif
     return vc;
+#else
+    return nil;
+#endif
 }
 @end
 
