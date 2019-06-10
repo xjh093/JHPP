@@ -7,7 +7,7 @@ Push &amp; Present ViewController at any view, just so easy!
 # Version
 Latest release version:
 
-[1.2.0](https://github.com/xjh093/JHPP/releases)
+[1.2.1](https://github.com/xjh093/JHPP/releases)
 
 ---
 
