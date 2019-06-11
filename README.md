@@ -1,6 +1,6 @@
 # JHPP
-Push &amp; Present ViewController at any view, just so easy!
-- 在任何 `view` 内进行 `Push`、`Present`，就是这么简单!
+Push &amp; Present ViewController at any view, just so easy! You can call it `Mediator` or `Router`
+- 在任何 `view` 内进行 `Push`、`Present`，就是这么简单! 你可以叫它 `中间件` 或者 `路由`。无需提前注册。拿来就用！
 
 ---
 
