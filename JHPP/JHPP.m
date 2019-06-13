@@ -145,7 +145,7 @@
 
 + (UIViewController *)fetchViewControllerFromRootViewController
 {
-    UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *vc = [UIApplication sharedApplication].delegate.window.rootViewController;
     while (vc) {
         if ([vc isKindOfClass:[UITabBarController class]]) {
             vc = [(UITabBarController *)vc selectedViewController];
