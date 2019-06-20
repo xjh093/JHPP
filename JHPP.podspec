@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'JHPP'
   s.summary      = 'Push & Present ViewController at any view, just so easy!'
-  s.version      = '1.2.5'
+  s.version      = '1.2.5.1'
   s.license      = { :type => 'MIT'}
   s.authors      = { 'Haocold' => 'xjh093@126.com' }
   s.homepage     = 'https://github.com/xjh093/JHPP'
