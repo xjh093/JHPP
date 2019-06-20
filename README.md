@@ -7,7 +7,7 @@ Push &amp; Present ViewController at any view, just so easy! You can call it `Me
 # Version
 Latest release version:
 
-[1.2.4](https://github.com/xjh093/JHPP/releases)
+[1.2.5](https://github.com/xjh093/JHPP/releases)
 
 ---
 
@@ -50,6 +50,10 @@ NSMutableDictionary *mdic = @{}.mutableCopy;
 ---
 
 # Logs
+
+### 2019-06-20:
+1.add method.
+   - fetch currentViewController.
 
 ### 2019-06-13:
 1.fix a bug. fetch vc may be nil.
