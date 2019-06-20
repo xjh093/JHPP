@@ -34,6 +34,11 @@
 
 #pragma mark --- public
 
++ (UIViewController *)currentViewController
+{
+    return [self fetchViewControllerFromRootViewController];
+}
+
 + (void)pushVC:(UIViewController *)vc from:(id)responder
 {
     [self pushVC:vc from:responder animated:YES];

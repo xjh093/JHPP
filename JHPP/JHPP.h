@@ -33,6 +33,12 @@
 /// A tool for  Push & Present ViewController
 @interface JHPP : NSObject
 
+
+/**
+ Fetch current ViewController at the top.
+ */
++ (UIViewController *)currentViewController;
+
 /**
  Push a viewController.
  
